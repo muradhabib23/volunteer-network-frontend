@@ -14,7 +14,7 @@ const Register = () => {
     const history = useHistory();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:5000/registeredEvents', {
+        fetch('https://boiling-meadow-72554.herokuapp.com/registeredEvents', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...data, photo})

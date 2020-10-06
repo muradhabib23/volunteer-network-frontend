@@ -10,7 +10,7 @@ const RegisteredEvent = () => {
     const [allEvents, setAllEvents] = useContext(AllEventContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/eventWorks?email='+loggedInUser.email)
+        fetch('https://boiling-meadow-72554.herokuapp.com/eventWorks?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setAllEvents(data))
     }, [])

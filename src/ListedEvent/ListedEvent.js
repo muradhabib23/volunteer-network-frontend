@@ -7,7 +7,7 @@ const ListedEvent = ({ totalEvents }) => {
     console.log(totalEvents)
     const eventWorks = () => {
 
-        fetch('http://localhost:5000/eventWorks?email='+loggedInUser.email)
+        fetch('https://boiling-meadow-72554.herokuapp.com/eventWorks?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data =>{
                 setAllEvents(data)
@@ -15,7 +15,7 @@ const ListedEvent = ({ totalEvents }) => {
             })
     }
     const deleteEvent = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://boiling-meadow-72554.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
